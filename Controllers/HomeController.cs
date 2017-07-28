@@ -8,6 +8,10 @@ namespace MVC486
         public ActionResult Index() {
             return View();
         }
+
+        public ActionResult Spaghetti() {
+            return View();
+        }
         
     }
 
