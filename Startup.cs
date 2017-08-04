@@ -18,7 +18,7 @@ namespace MVC486
         {
             services.AddMvc();
             services.AddDbContext<ConferenceContext>(opt => opt.UseSqlServer(
-                "Server=(localdb)\\mssqllocaldb;Database=Conferences;Trusted_Connection=True;MultipleActiveResultSets=true"));
+                "Server=(localdb)\\mssqllocaldb;Database=FuckingConferences;Trusted_Connection=True;MultipleActiveResultSets=true"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

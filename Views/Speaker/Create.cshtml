@@ -1,0 +1,31 @@
+@* Hello *@
+@model MVC486.Models.Speaker
+@{
+    ViewData["Title"] = "Create a Speaker";
+}
+
+<h1>Create a Speaker</h1>
+<form asp-action="Create">
+    <div asp-validation-summary="All"></div>
+    <div class="row">
+        <div class="one column">
+          <label asp-for="Name"></label>
+          <span asp-validation-for="Name"></span>
+        </div>
+        <div class="eight columns">
+          <input asp-for="Name" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="one column">
+          <label asp-for="EmailAddress"></label>
+          <span asp-validation-for="EmailAddress"></span>
+        </div>
+        <div class="eight columns">
+          <input asp-for="EmailAddress">
+        </div>
+    </div>
+    <p>
+        <input type="submit" value="Create" />
+    </p>
+</form>

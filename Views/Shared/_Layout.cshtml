@@ -4,7 +4,15 @@
         <link rel="stylesheet" href="~/assets/normalize.css" />
         <link rel="stylesheet" href="~/assets/skeleton.css" />
     </head>
-    <body>
-        @RenderBody()
+    <body style="margin: 5px">
+        <div class="row">
+            <div class="eight columns">
+                @RenderBody()
+            </div>
+            <div class="four columns">
+                @Html.Partial("_TestPartial")
+            </div>
+        </div>
+        
     </body>
 </html>

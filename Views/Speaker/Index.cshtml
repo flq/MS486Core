@@ -1,0 +1,21 @@
+@model IEnumerable<MVC486.Models.Speaker>
+@{
+    ViewData["Title"] = "Speaker Index";
+}
+
+<h1>Speakers</h1>
+
+<p>@Html.ActionLink("create new", "create")</p>
+
+<table>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Name)</th>
+        <th>@Html.DisplayNameFor(model => model.EmailAddress)</th>
+    </tr>
+@foreach (var item in Model) {
+    <tr>
+        <td>@item.Name</td>
+        <td><a href="@item.EmailAddress">@item.EmailAddress</a></td>
+    </tr>
+}
+</table>
