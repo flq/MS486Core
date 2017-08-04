@@ -7,24 +7,24 @@
 <h1>Create a Speaker</h1>
 <form asp-action="Create">
     <div asp-validation-summary="All"></div>
-    <div class="row">
-        <div class="one column">
+    <row>
+        <column size="one">
           <label asp-for="Name"></label>
           <span asp-validation-for="Name"></span>
-        </div>
-        <div class="eight columns">
+        </column>
+        <column size="eight">
           <input asp-for="Name" />
-        </div>
-    </div>
-    <div class="row">
-        <div class="one column">
+        </column>
+    </row>
+    <row>
+        <column size="one">
           <label asp-for="EmailAddress"></label>
           <span asp-validation-for="EmailAddress"></span>
-        </div>
-        <div class="eight columns">
+        </column>
+        <column size="eight">
           <input asp-for="EmailAddress">
-        </div>
-    </div>
+        </column>
+    </row>
     <p>
         <input type="submit" value="Create" />
     </p>
