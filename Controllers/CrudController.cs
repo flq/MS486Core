@@ -27,13 +27,13 @@ namespace MVC486.Controllers
             return View(all);
         }
 
-        [HttpGet, ValidateAntiForgeryToken]
+        [HttpGet]
         public IActionResult Create()
         {
             return View();
         }
 
-        [HttpPost]
+        [HttpPost, ValidateAntiForgeryToken]
         public ActionResult Create(T item)
         {
             if (!ModelState.IsValid)

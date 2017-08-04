@@ -7,7 +7,7 @@ namespace MVC486.Database
     {
         public static void Initialize(ConferenceContext context)
         {
-            context.Database.EnsureDeleted();
+            //context.Database.EnsureDeleted();
             context.Database.EnsureCreated();
             if (context.Speakers.Any())
               return;

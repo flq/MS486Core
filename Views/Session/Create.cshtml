@@ -1,7 +1,31 @@
 @* Hello *@
 @model MVC486.Models.Session
+@{
+    ViewData["Title"] = "Create a Session";
+}
 
 <h1>Create a Session</h1>
-<form>
-    
+<form asp-action="Create">
+    <div asp-validation-summary="All"></div>
+    <div class="row">
+        <div class="one column">
+            <label asp-for="Title"></label>
+            <span asp-validation-for="Title"></span>
+        </div>
+        <div class="eight columns">
+            <input asp-for="Title" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="one column">
+            <label asp-for="Abstract"></label>
+            <span asp-validation-for="Abstract"></span>
+        </div>
+        <div class="eight columns">
+            <input asp-for="Abstract">
+        </div>
+    </div>
+    <p>
+        <input type="submit" value="Create" />
+    </p>
 </form>

@@ -5,7 +5,7 @@ namespace MVC486.Models
 {
     public class Session 
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int SessionId {get;set;}
         [Required]
         public string Title {get;set;}
