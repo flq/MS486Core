@@ -9,7 +9,9 @@ using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Configuration;
 using MVC486.Database;
+using System.IO;
 
 namespace MVC486
 {
@@ -17,12 +19,12 @@ namespace MVC486
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            Program.EnsureConfig();
             services.AddMvc(opts =>
             {
                 opts.OutputFormatters.Add(new XmlSerializerOutputFormatter());
             });
-            services.AddDbContext<ConferenceContext>(opt => opt.UseSqlServer(
-                "Server=(localdb)\\mssqllocaldb;Database=FuckingConferences;Trusted_Connection=True;MultipleActiveResultSets=true"));
+            services.AddDbContext<ConferenceContext>(opt => opt.UseSqlServer(Program.Configuration.GetConnectionString("DefaultConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
